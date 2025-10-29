@@ -7,7 +7,26 @@
 #include "Wizard.h"
 #include "Paladin.h"
 #include "worldevil.h"
+#include <fstream>
 //#include "nililay.h"
+
+
+
+
+
+
+int TestChoise(int choise, int maxchoise)
+{
+    while (choise > maxchoise || choise < 1)
+    {
+        cout << "нужно четко определитьс€ с решением \n повтори свой ответ\n";
+        cin >> choise;
+    }
+    return choise;
+};
+
+
+
 
 
 //модификаторы доступа:
@@ -24,6 +43,14 @@ class Player
         {
             player->Create();
         }
+        void Save(Npc* player)
+        {
+            player->Save();
+        };
+        Npc Load(Npc* player)
+        {
+            return player->Load();
+        };
 };
 
 int main()
@@ -46,9 +73,9 @@ int main()
     megaWizard->GetInfo();
     cout << "***ћегавизард***\n\n";
     
-    /*
+  
     Paladin* paladin = new Paladin();
-    *paladin = *wizard + *warrior;
+    /**paladin = *wizard + *warrior;
     cout << "\n\n***Paladin***\n";
     paladin->GetInfo();
     cout << "***Paladin***\n\n";*/
@@ -66,7 +93,7 @@ int main()
         cin >> choise;
     }
 
-    if (choise == 1)
+    if (choise == 1)//новый персонаж
     {
         cout << "расскажи о себе\n\t1 - ¬оин\n\t2 - ¬олшебник\n\t3 - ѕаладин";
         //______________________________
@@ -99,6 +126,10 @@ int main()
         }*/
 
     }
+    else
+    {
+        warrior = player->Load();
+    }
 
 
     //Paladin* player3 = new Paladin();
@@ -110,6 +141,15 @@ int main()
     //Abcd->HI();
     //delete Abcd;
 
+
+
+    cout << "—делаем остановку тут?\n\t1 - сохранить игру\n\t2- продолжить\n";
+    cin >> choise;
+    while (choise > 2 || choise < 1)
+    {
+        cout << "нужно четко определитьс€ с решением \n повтори свой ответ\n";
+        cin >> choise;
+    }
 
 
 

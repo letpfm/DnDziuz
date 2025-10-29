@@ -9,7 +9,7 @@ using namespace std;
 
 class Wizard : virtual public Npc
 {
-protected:
+public:
     unsigned short intellect = 27;
     string spell[4] = { "вспышка", "магисческая стрела", "огненный шар", "метеоритный дождь" };
 public:

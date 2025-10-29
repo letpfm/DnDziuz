@@ -1,0 +1,9 @@
+﻿  FileName.cpp
+C:\Users\Пользователь-СГАУ\Downloads\dnd Project\FileName.cpp(131,25): error C2660: Player::Load: функция не принимает 0 аргументов
+C:\Users\Пользователь-СГАУ\Downloads\dnd Project\FileName.cpp(50,13): message : см. объявление "Player::Load"
+C:\Users\Пользователь-СГАУ\Downloads\dnd Project\FileName.cpp(131,25): message : при попытке сопоставить список аргументов "()"
+  Npc.cpp
+  Paladin.cpp
+  Wizard.cpp
+  warrrior.cpp
+  Создание кода...
